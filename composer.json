@@ -1,0 +1,26 @@
+{
+    "name": "coldwind/flysystem-sae",
+    "description": "Flysystem adapter for SAE",
+    "license": "Apache-2.0",
+    "homepage": "https://github.com/zxz054321/flysystem-sae",
+    "authors": [
+        {
+            "name": "Abel Halo",
+            "email": "zxz054321@163.com",
+            "homepage": "http://www.air-soft.cn",
+            "role": "Creator"
+        }
+    ],
+    "support": {
+        "source": "https://github.com/zxz054321/flysystem-sae"
+    },
+    "require": {
+        "php": ">=5.4.0",
+        "league/flysystem": "~1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Coldwind\\Flysystem\\": "src/"
+        }
+    }
+}
