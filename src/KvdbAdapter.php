@@ -122,6 +122,8 @@ class KvdbAdapter implements AdapterInterface
 
     protected function kvPut($path, $contents, Config $config, $file = null)
     {
+        $addOrSet = is_null($file) ? 'set' : 'add';
+
         $file['contents']  = $contents;
         $file['timestamp'] = time();
         $file['size']      = Util::contentSize($contents);
@@ -129,8 +131,6 @@ class KvdbAdapter implements AdapterInterface
         if ($visibility = $config->get('visibility')) {
             $file['visibility'] = $visibility;
         }
-
-        $addOrSet = is_null($file) ? 'set' : 'add';
 
         if ($this->client->$addOrSet($path, $file)) {
             return $file + compact('path');
