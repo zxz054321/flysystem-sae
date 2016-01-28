@@ -1,6 +1,6 @@
 <?php
 
-namespace Coldwind\Filesystem;
+namespace Coldwind\Flysystem;
 
 use League\Flysystem\Exception;
 
